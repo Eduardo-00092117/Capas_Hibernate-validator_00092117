@@ -7,12 +7,14 @@
 <body>
 	<h1>Ingresar producto</h1>
 	<form method="post" th:action="@{/validar}" th:object="${product}">
-		<label>Código de producto: </label> <input th:field="*{codigo}" type="text"> <br> <span th:errors="*{codigo}" style="color:#FF0000"></span><br>
-		<label>Nombre: </label> <input th:field="*{nombre}" type="text"> <br> <span th:errors="*{nombre}" style="color:#FF0000"></span><br>
-		<label>Marca: </label> <input th:field="*{marca}" type="text"> <br> <span th:errors="*{marca}" style="color:#FF0000"></span><br>
-		<label>Descripción: </label> <input th:field="*{descripcion}" type="text"> <br> <span th:errors="*{descripcion}" style="color:#FF0000"></span><br>
-		<label>Existencias: </label> <input th:field="*{existencias}" type="text"> <br> <span th:errors="*{existencias}" style="color:#FF0000"></span><br>
-		<label>Fecha de ingreso: </label> <input th:field="*{fechaIngreso}" type="date"> <br> <span th:errors="*{fechaIngreso}" style="color:#FF0000"></span><br>
+		<label>Código de producto: </label> <br> <input th:field="*{codigo}" type="text"> <br> <span th:errors="*{codigo}" style="color:#FF0000"></span><br>
+		<label>Nombre: </label> <br> <input th:field="*{nombre}" type="text"> <br> <span th:errors="*{nombre}" style="color:#FF0000"></span><br>
+		<label>Marca: </label> <br> <input th:field="*{marca}" type="text"> <br> <span th:errors="*{marca}" style="color:#FF0000"></span><br>
+		<label>Descripción: </label> <br>
+		<textarea rows="10" cols="35" th:field="*{descripcion}" style="resize: none;"></textarea>
+		<br> <span th:errors="*{descripcion}" style="color:#FF0000"></span><br>
+		<label>Existencias: </label> <br> <input th:field="*{existencias}" type="text"> <br> <span th:errors="*{existencias}" style="color:#FF0000"></span><br>
+		<label>Fecha de ingreso: </label> <br> <input th:field="*{fechaIngreso}" type="date"> <br> <span th:errors="*{fechaIngreso}" style="color:#FF0000"></span><br>
 		<input type="submit">
 	</form>
 </body>

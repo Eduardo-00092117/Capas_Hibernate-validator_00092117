@@ -1,12 +1,16 @@
 package com.uca.capas.domain;
 
 import javax.validation.constraints.Digits;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Length;
+
 public class Product {
 	
-	@Digits(integer=12, fraction=0, message = "Se esperaba numeros enteros de 12 digitos!")
+	@Size(min=12, max=12, message = "Debe ser igual a 12 digitos!")
 	private String codigo;
 	@Size(min=1, max=100)
 	private String nombre;

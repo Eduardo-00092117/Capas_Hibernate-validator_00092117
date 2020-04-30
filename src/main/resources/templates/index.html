@@ -2,10 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Producto</title>
 </head>
 <body>
-	<h1>Ingresar productos</h1>
+	<h1>Ingresar producto</h1>
 	<form method="post" th:action="@{/validar}" th:object="${product}">
 		<label>Código de producto: </label> <input th:field="*{codigo}" type="text"> <br> <span th:errors="*{codigo}" style="color:#FF0000"></span><br>
 		<label>Nombre: </label> <input th:field="*{nombre}" type="text"> <br> <span th:errors="*{nombre}" style="color:#FF0000"></span><br>
